@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perú Unido</title>
+  <meta name="description" content="Descubre las regiones del Perú: Costa, Sierra y Selva. Conoce sus desafíos y soluciones.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: url('assets/peru-fondo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    h1 {
+      color: #ffeb3b;
+      font-size: 64px;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: fadeSlideDown 1.2s ease-out forwards, float 4s ease-in-out infinite;
+    }
+
+    .boxes {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .box {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 16px;
+      padding: 25px;
+      flex: 1 1 300px;
+      max-width: 400px;
+      color: #f5f5f5;
+      text-align: left;
+      font-size: 17px;
+      line-height: 1.6;
+      font-weight: 400;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeSlideUp 1s ease-out forwards;
+    }
+
+    .box:nth-child(1) {
+      animation-delay: 0.5s;
+    }
+
+    .box:nth-child(2) {
+      animation-delay: 0.8s;
+    }
+
+    .box h2 {
+      color: #ffeb3b;
+      font-size: 26px;
+      font-weight: 600;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    a {
+      padding: 15px 35px;
+      background-color: #ffeb3b;
+      color: #333;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 50px;
+      transition: background-color 0.3s, box-shadow 0.3s, filter 0.3s;
+      opacity: 0;
+      transform: scale(0.9);
+      animation: fadeZoom 1s ease-out forwards;
+      animation-delay: 1.2s;
+    }
+
+    a:hover {
+      filter: brightness(0.8);
+      box-shadow: 0 0 12px #fdd835;
+    }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      margin-top: auto;
+      padding: 20px;
+      color: #ccc;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 36px;
+        letter-spacing: 1px;
+      }
+      .box {
+        font-size: 15px;
+      }
+      .box h2 {
+        font-size: 22px;
+      }
+      a {
+        font-size: 18px;
+        padding: 12px 25px;
+        margin-top: 40px;
+      }
+    }
+
+    /* Animaciones */
+    @keyframes fadeSlideDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeSlideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeZoom {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Descubre Perú</h1>
+
+    <div class="boxes">
+      <div class="box">
+        <h2>Objetivo</h2>
+        <p>
+          Este proyecto tiene como objetivo integrar conocimientos geográficos, históricos y medioambientales en una maqueta interactiva con códigos QR. Se identifican lugares clave de Costa, Sierra y Selva, analizando problemas ambientales actuales y propuestas de solución, junto con obras históricas vinculadas al manejo adecuado de los recursos hídricos, fomentando un aprendizaje integral.
+        </p>
+      </div>
+
+      <div class="box">
+        <h2>Estrategia</h2>
+        <p>
+          La estrategia busca fortalecer la conciencia ciudadana sobre la preservación del medio ambiente y valorar la historia en la gestión de los recursos naturales. Los códigos QR en el mapa facilitarán el acceso a información clave de las regiones, permitiendo una experiencia dinámica, interactiva y enriquecedora para todos los participantes del proyecto.
+        </p>
+      </div>
+    </div>
+
+    <a href="regiones.html">¡Explora Ahora!</a>
+  </div>
+
+  <footer>
+    Proyecto Web - Las 3 Regiones del Perú
+  </footer>
+
+</body>
+</html>

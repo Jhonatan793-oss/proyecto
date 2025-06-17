@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Regiones del Perú</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animaciones -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+      background: url('assets/fondo-regiones.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-family: 'Roboto Condensed', sans-serif;
+      color: #ffeb3b;
+      font-size: 3em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+      margin: 0 0 30px 0;
+    }
+
+    main {
+      width: 95%;
+      max-width: 800px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    section {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      overflow: hidden;
+    }
+
+    section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: inherit;
+      filter: blur(8px);
+      transform: scale(1.1);
+      opacity: 0.7;
+      z-index: 0;
+    }
+
+    section > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .costa {
+      background-image: url('assets/regiones-costa.jpg');
+    }
+
+    .sierra {
+      background-image: url('assets/regiones-sierra.jpg');
+    }
+
+    .selva {
+      background-image: url('assets/regiones-selva.jpg');
+    }
+
+    h2 {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 2.2em;
+      color: #ffeb3b;
+      text-transform: uppercase;
+      margin: 10px 0 15px 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    }
+
+    p {
+      font-size: 1.1em;
+      text-align: justify;
+      line-height: 1.6;
+      margin: 0 0 15px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 25px;
+      background-color: #ffeb3b;
+      color: #333;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #fdd835;
+      transform: scale(1.05);
+    }
+
+    .btn-container {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+
+  <script>
+    window.addEventListener('load', () => {
+      const navType = performance.getEntriesByType("navigation")[0].type;
+      if (navType === "reload") {
+        window.location.href = "index.html";
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="overlay">
+    <header>
+      <h1>Las Regiones del Perú</h1>
+    </header>
+
+    <main>
+      <section class="costa" data-aos="fade-up">
+        <h2>Costa</h2>
+        <p>
+          La Costa del Perú, caracterizada por su clima árido y su elevada concentración urbana, enfrenta problemas criticos relacionados con la escasez y la contaminación del agua. Al mismo tiempo, ha sido escenario de importantes obras históricas que han permitido el abastecimiento hidrico para millones de personas.
+        </p>
+        <div class="btn-container">
+          <a class="btn" href="costa.html">Ver más</a>
+        </div>
+      </section>
+
+      <section class="sierra" data-aos="fade-up" data-aos-delay="200">
+        <h2>Sierra</h2>
+        <p>
+          La región Sierra destaca por su altitud, diversidad climática y ser origen de los principales rios del país. Sin embargo, enfrenta problemas graves como la contaminación minera, que afecta tanto al agua como a la salud humana. También ha sido escenario de grandes obras energéticas basadas en el aprovechamiento del agua.
+        </p>
+        <div class="btn-container">
+          <a class="btn" href="sierra.html">Ver más</a>
+        </div>
+      </section>
+
+      <section class="selva" data-aos="fade-up" data-aos-delay="400">
+        <h2>Selva</h2>
+        <p>
+          La Selva peruana, una de las regiones más biodiversas del planeta, está amenazada por actividades humanas como la minería ilegal y la deforestación. Además de los impactos ambientales, estas actividades afectan directamente a las comunidades indigenas. No obstante, también se han impulsado políticas y áreas protegidas para preservar sus recursos naturales.
+        </p>
+        <div class="btn-container">
+          <a class="btn" href="selva.html">Ver más</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="btn" href="index.html">Volver al Inicio</a>
+    </footer>
+  </div>
+
+  <!-- AOS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

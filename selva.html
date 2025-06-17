@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selva del Perú</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animaciones -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      min-height: 100vh;
+      background: url('assets/selva.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-family: 'Merriweather', serif;
+      color: #ffeb3b;
+      font-size: 3em;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      margin-bottom: 30px;
+    }
+
+    .section-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 2px solid #ffeb3b;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 900px;
+      width: 100%;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .section-box img {
+      width: 250px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 2px 2px 6px #000;
+    }
+
+    .section-content {
+      flex: 1;
+    }
+
+    .section-content h2 {
+      font-family: 'Merriweather', serif;
+      font-size: 2em;
+      color: #ffeb3b;
+      margin: 0 0 10px 0;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .section-content p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    footer {
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ffeb3b;
+      color: #333;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #fdd835;
+      transform: scale(1.05);
+    }
+
+    @media(max-width: 600px) {
+      .section-box {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .section-box img {
+        width: 90%;
+        height: auto;
+      }
+    }
+  </style>
+
+  <script>
+    window.addEventListener('load', () => {
+      const navType = performance.getEntriesByType("navigation")[0].type;
+      if (navType === "reload") {
+        window.location.href = "index.html";
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Selva del Perú</h1>
+
+    <div class="section-box" data-aos="fade-up">
+      <img src="assets/hito-selva.jpg" alt="Hito histórico en la selva">
+      <div class="section-content">
+        <h2>Hito Histórico</h2>
+        <p>
+          La creación del Parque Nacional del Manu en 1973 fue un hito en la conservación de la selva peruana. Este parque, declarado Patrimonio de la Humanidad por la UNESCO, protege una vasta área de biodiversidad y culturas originarias. Es un ejemplo emblemático de cómo la gestión ambiental puede preservar ecosistemas únicos para futuras generaciones.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-box" data-aos="fade-up" data-aos-delay="200">
+      <img src="assets/problema-selva.jpg" alt="Problema en la selva">
+      <div class="section-content">
+        <h2>Problema Ambiental</h2>
+        <p>
+          En esta zona se practica minería aurífera ilegal que utiliza mercurio, contaminando suelos y ríos, afectando gravemente a la biodiversidad y a las comunidades locales. Este problema genera la pérdida de hábitats naturales y pone en peligro especies endémicas de la Amazonía peruana.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-box" data-aos="fade-up" data-aos-delay="400">
+      <img src="assets/solucion-selva.jpg" alt="Solución en la selva">
+      <div class="section-content">
+        <h2>Soluciones</h2>
+        <p>
+          Fortalecimiento de la presencia del Estado y fiscalización minera. Promoción de alternativas económicas sostenibles como el ecoturismo. Campañas de reforestación y recuperación de áreas degradadas. Además, la educación ambiental busca sensibilizar a las comunidades sobre la importancia de conservar el entorno.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-box" data-aos="fade-up" data-aos-delay="600">
+      <img src="assets/rio-selva.jpg" alt="Río en la selva">
+      <div class="section-content">
+        <h2>Río Tambopata</h2>
+        <p>
+          Beneficio del buen manejo del recurso: Área natural protegida que preserva miles de especies. Fomenta el ecoturismo y la educación ambiental, promoviendo un uso responsable de los recursos sin destruir el ecosistema. Además, estos ríos son vitales para el equilibrio hídrico de toda la región.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <a class="btn" href="regiones.html">Volver a Regiones</a>
+      <a class="btn" href="index.html">Volver al Inicio</a>
+    </footer>
+  </div>
+
+  <!-- AOS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: false
+    });
+  </script>
+</body>
+</html>

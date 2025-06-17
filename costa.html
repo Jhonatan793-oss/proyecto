@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Costa del Perú</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animaciones -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      min-height: 100vh;
+      background: url('assets/costa.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-family: 'Merriweather', serif;
+      color: #ffeb3b;
+      font-size: 3em;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      margin-bottom: 30px;
+    }
+
+    .section-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 2px solid #ffeb3b;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 900px;
+      width: 100%;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .section-box img {
+      width: 250px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 2px 2px 6px #000;
+    }
+
+    .section-content {
+      flex: 1;
+    }
+
+    .section-content h2 {
+      font-family: 'Merriweather', serif;
+      font-size: 2em;
+      color: #ffeb3b;
+      margin: 0 0 10px 0;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .section-content p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      text-align: justify;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    footer {
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ffeb3b;
+      color: #333;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #fdd835;
+      transform: scale(1.05);
+    }
+
+    @media(max-width: 600px) {
+      .section-box {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .section-box img {
+        width: 90%;
+        height: auto;
+      }
+    }
+  </style>
+
+  <script>
+    window.addEventListener('load', () => {
+      const navType = performance.getEntriesByType("navigation")[0].type;
+      if (navType === "reload") {
+        window.location.href = "index.html";
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Costa del Perú</h1>
+
+    <div class="section-box" data-aos="fade-up">
+      <img src="assets/hito-costa.jpg" alt="Hito histórico en la costa">
+      <div class="section-content">
+        <h2>Hito Histórico</h2>
+        <p>
+          La construcción de la planta de tratamiento La Atarjea en Lima fue clave para garantizar el acceso al agua potable para millones de habitantes. Esta infraestructura permitió afrontar los retos de la expansión urbana y mejorar significativamente la calidad de vida en la capital peruana.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-box" data-aos="fade-up" data-aos-delay="200">
+      <img src="assets/problema-costa.jpg" alt="Problema ambiental en la costa">
+      <div class="section-content">
+        <h2>Problema Ambiental</h2>
+        <p>
+          Problema ambiental: Contaminación del río Rímac por aguas residuales domésticas e industriales. Este problema afecta la biodiversidad del ecosistema acuático, compromete el abastecimiento de agua potable y representa un riesgo para la salud de la población.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-box" data-aos="fade-up" data-aos-delay="400">
+      <img src="assets/solucion-costa.jpg" alt="Solución en la costa">
+      <div class="section-content">
+        <h2>Soluciones</h2>
+        <p>
+          Construcción y mejora de plantas de tratamiento de aguas residuales. Mayor fiscalización ambiental a empresas que descargan residuos en el río. Programas de concientización dirigidos a la población para evitar que arrojen basura y desechos en el cauce del río Rímac.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-box" data-aos="fade-up" data-aos-delay="600">
+      <img src="assets/rio-costa.jpg" alt="Río Rímac">
+      <div class="section-content">
+        <h2>Río Rímac</h2>
+        <p>
+          Beneficio del buen manejo del recurso: Permitió la regulación del caudal del río, garantizando un suministro continuo de agua potable a Lima. Esta obra fue clave para enfrentar las sequías, apoyar el crecimiento de la ciudad y promover un desarrollo sostenible que asegure el bienestar de futuras generaciones.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <a class="btn" href="regiones.html">Volver a Regiones</a>
+      <a class="btn" href="index.html">Volver al Inicio</a>
+    </footer>
+  </div>
+
+  <!-- AOS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: false
+    });
+  </script>
+</body>
+</html>
